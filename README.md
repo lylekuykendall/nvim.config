@@ -66,9 +66,20 @@ Start Neovim
 nvim
 ```
 
-That's it! Lazy will install all the plugins you have. Use `:Lazy` to view
-current plugin status. Hit `q` to close the window.
+That's it! Lazy will install all the default plugins I use. `lazy-bootstrap.lua` is
+the file that bootstraps the initial install of the config, and `lazy-plugins.lua` is
+responsible for installing the plugins defined in the `plugins` folder.
 
-Read through the `init.lua` file in your configuration folder for more
-information about extending and exploring Neovim. Individual plugins and
-their configurations can be found in the `plugins` folder.
+There are a few plugins worth learning a little more about:
+
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - configured in `lspconfig.lua`
+  - There are several language servers installed by default using Mason (see `:h Mason`)
+  - These default language servers are listed in the `ensure_installed` table on line 221 of `lspconfig.lua`.
+    - Add additional servers as you see fit, see [available servers](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers).
+- [telescope](https://github.com/nvim-telescope/telescope.nvim) - configured in `telescope.lua`
+- [nvim-cmp (completion)](https://github.com/hrsh7th/nvim-cmp) - configured in `cmp.lua`
+- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - configured in `treesitter.lua`
+  - Treesitter has support for several languages installed by default, listed in `ensure_installed` on line 6 of `treesitter.lua`
+  - Add additional languages to this table, or install manually with `:TSInstall <language>`
+
+Use `:Lazy` to view current plugin status. Hit `q` to close the window.
