@@ -70,6 +70,16 @@ That's it! Lazy will install all the default plugins I use. `lazy-bootstrap.lua`
 the file that bootstraps the initial install of the config, and `lazy-plugins.lua` is
 responsible for installing the plugins defined in the `plugins` folder.
 
+See:
+- `options.lua` for global neovim options
+- `keymaps.lua` for global neovim keymaps
+
+#### Changing the color scheme
+
+There are a variety of bundled themes. Try `:Telescope colorscheme` to open a picker and preview window.
+
+#### Plugins worth learning about
+
 There are a few plugins worth learning a little more about:
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - configured in `lspconfig.lua`
