@@ -58,7 +58,7 @@ Alternatively, you may wish to clone the repo elsewhere and create a symlink to 
 git clone git@github.com:lylekuykendall/nvim.config.git && sudo ln -s /path/to/cloned/repo ~/.config/nvim
 ```
 
-### Post Installation
+## Usage
 
 Start Neovim
 
@@ -66,11 +66,12 @@ Start Neovim
 nvim
 ```
 
-That's it! Lazy will install all the default plugins I use. `lazy-bootstrap.lua` is
+Lazy will install all the default plugins the first time you open neovim. It will also automatically
+install any new plugins you create files for in the `plugins` folder. `lazy-bootstrap.lua` is
 the file that bootstraps the initial install of the config, and `lazy-plugins.lua` is
 responsible for installing the plugins defined in the `plugins` folder.
 
-#### Learning keymaps
+### Learning keymaps
 By default, `<space>` is the leader key. When you see `<leader>` in keymappings, it refers to the leader key.
 Leader key can be changed by updating these two lines in `init.lua`
 
@@ -86,11 +87,11 @@ These two files have most of the keymaps and options being used:
 
 You can also use telescope to pull up a searchable list of all keymaps. Try `<leader>sk`
 
-#### Changing the color scheme
+### Changing the color scheme
 
 There are a variety of bundled themes. Try `:Telescope colorscheme` to open a picker and preview window.
 
-#### Plugins worth learning about
+### Plugins worth learning about
 
 There are a few plugins worth learning a little more about:
 
@@ -106,15 +107,15 @@ There are a few plugins worth learning a little more about:
 
 Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
-#### Plugins requiring additional configuration
+### Plugins requiring additional configuration
 
-##### TagBar
+#### TagBar
 
 Tagbar is a sidebar you can toggle open/closed with `<F8>`. It requires that you 
 have [ctags](https://github.com/universal-ctags/ctags?tab=readme-ov-file#how-to-build-and-install) 
 intalled and on your path.
 
-##### Codeium
+#### Codeium
 
 [codeium.nvim](https://github.com/Exafunction/codeium.nvim) is an ai completion tool that you can use 
 as a source for your completion suggestions. You'll need to run `:Codeium auth` and use the link to get an
