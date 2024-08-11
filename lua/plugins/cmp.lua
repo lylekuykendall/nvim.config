@@ -1,3 +1,16 @@
+local function border(hl_name)
+	return {
+		{ "╭", hl_name },
+		{ "─", hl_name },
+		{ "╮", hl_name },
+		{ "│", hl_name },
+		{ "╯", hl_name },
+		{ "─", hl_name },
+		{ "╰", hl_name },
+		{ "│", hl_name },
+	}
+end
+
 return {
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
@@ -67,6 +80,14 @@ return {
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
 
+				window = {
+					completion = {
+						border = border("CmpDocBorder"),
+					},
+					documentation = {
+						border = border("CmpDocBorder"),
+					},
+				},
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
 				--
