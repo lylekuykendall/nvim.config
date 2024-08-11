@@ -72,4 +72,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- remember last cursor position when reopening a file
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+	desc = "return cursor to where it was last time closing the file",
+	pattern = "*",
+	command = 'silent! normal! g`"zv',
+})
+
 -- vim: ts=2 sts=2 sw=2 et
