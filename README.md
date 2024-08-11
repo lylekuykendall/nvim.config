@@ -70,9 +70,21 @@ That's it! Lazy will install all the default plugins I use. `lazy-bootstrap.lua`
 the file that bootstraps the initial install of the config, and `lazy-plugins.lua` is
 responsible for installing the plugins defined in the `plugins` folder.
 
-See:
+#### Learning keymaps
+By default, `<space>` is the leader key. When you see `<leader>` in keymappings, it refers to the leader key.
+Leader key can be changed by updating these two lines in `init.lua`
+
+```lua
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+```
+
+These two files have most of the keymaps and options being used:
+
 - `options.lua` for global neovim options
 - `keymaps.lua` for global neovim keymaps
+
+You can also use telescope to pull up a searchable list of all keymaps. Try `<leader>sk`
 
 #### Changing the color scheme
 
@@ -107,4 +119,4 @@ intalled and on your path.
 [codeium.nvim](https://github.com/Exafunction/codeium.nvim) is an ai completion tool that you can use 
 as a source for your completion suggestions. You'll need to run `:Codeium auth` and use the link to get an
 api token to give to the plugin. Next, you'll need to find and uncomment the two locations in this config
-where codeium can be used as a source. Try `fg` or `<space>sg` and grepping for `codeium` to find these lines.
+where codeium can be used as a source. Try `fg` or `<leader>sg` and grepping for `codeium` to find these lines.
