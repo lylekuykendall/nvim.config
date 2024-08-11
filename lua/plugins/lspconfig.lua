@@ -252,6 +252,9 @@ return {
 			function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
 				opts = opts or {}
 				opts.border = opts.border or border
+				-- override default size of floating preview window
+				opts.max_width = opts.max_width or 80
+				opts.max_height = opts.max_height or 100
 				return orig_util_open_floating_preview(contents, syntax, opts, ...)
 			end
 
