@@ -93,3 +93,18 @@ There are a few plugins worth learning a little more about:
   - Add additional languages to this table, or install manually with `:TSInstall <language>`
 
 Use `:Lazy` to view current plugin status. Hit `q` to close the window.
+
+#### Plugins requiring additional configuration
+
+##### TagBar
+
+Tagbar is a sidebar you can toggle open/closed with `<F8>`. It requires that you 
+have [ctags](https://github.com/universal-ctags/ctags?tab=readme-ov-file#how-to-build-and-install) 
+intalled and on your path.
+
+##### Codeium
+
+[codeium.nvim](https://github.com/Exafunction/codeium.nvim) is an ai completion tool that you can use 
+as a source for your completion suggestions. You'll need to run `:Codeium auth` and use the link to get an
+api token to give to the plugin. Next, you'll need to find and uncomment the two locations in this config
+where codeium can be used as a source. Try `fg` or `<space>sg` and grepping for `codeium` to find these lines.
