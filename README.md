@@ -72,6 +72,7 @@ the file that bootstraps the initial install of the config, and `lazy-plugins.lu
 responsible for installing the plugins defined in the `plugins` folder.
 
 ### Learning keymaps
+
 By default, `<space>` is the leader key. When you see `<leader>` in keymappings, it refers to the leader key.
 Leader key can be changed by updating these two lines in `init.lua`
 
@@ -84,8 +85,15 @@ These two files have most of the keymaps and options being used:
 
 - `options.lua` for global neovim options
 - `keymaps.lua` for global neovim keymaps
+- `telescope.lua` for telescope-specific (fuzzy file search & more) keymaps
 
-You can also use telescope to pull up a searchable list of all keymaps. Try `<leader>sk`
+#### Telescope keymaps
+
+- `<leader>sf` for fuzzy file search
+- `<leader>sn` for fuzzy file search within neovim config files
+- `<leader>sg` for fuzzy grep for text
+- `<leader>sw` for fuzzy grep for word under cursor
+- `<leader>sk` for fuzzy keymap search
 
 ### Changing the color scheme
 
