@@ -16,6 +16,7 @@ Install the latest stable version of [neovim](https://github.com/neovim/neovim).
 External Requirements:
 
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
+  - If you built from source, the first step had you install these build requisites
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - Clipboard tool (xclip/xsel/win32yank or other depending on platform)
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides various icons
