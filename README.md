@@ -145,6 +145,8 @@ Golang has some additional debugging keymaps thanks to [nvim-dap-go](https://git
 see these options after pressing `<F5>` to begin a debug session. For more information,
 see the [docs](https://github.com/leoluz/nvim-dap-go/blob/main/README.md#debugging-with-command-line-arguments).
 
+When the debug ui is visible, you can jump between the various windows with `<C-hjkl>` (`CTRL+hjkl`).
+
 ### Plugins requiring additional configuration
 
 #### TagBar
