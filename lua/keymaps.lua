@@ -8,12 +8,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.open_float, { desc = "Open diagnostic in floating window" })
 
--- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
 -- Window splits
 vim.keymap.set("n", "<leader>h", ":split<CR>", { desc = "Split down" })
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { desc = "Split right" })
@@ -37,10 +31,17 @@ vim.keymap.set("n", "<TAB>l", "<CMD> tabnext <CR>", { desc = "Next tab" })
 vim.keymap.set("n", "<TAB>h", "<CMD> tabprevious <CR>", { desc = "Previous tab" })
 vim.keymap.set("n", "<TAB>x", "<CMD> tabclose <CR>", { desc = "Close tab" })
 
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
+-- Move highlighted text
+local opts = { noremap = true, silent = true }
+vim.keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
+vim.keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
+vim.keymap.set("v", "p", '"_dP', opts)
+vim.keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- toggle terminal
+-- Terminal
 vim.keymap.set("n", "<A-h>", function()
 	require("nvterm.terminal").toggle("horizontal")
 end, { desc = "Toggle horizontal terminal" })
@@ -59,6 +60,9 @@ end, { desc = "Toggle floating terminal" })
 vim.keymap.set("t", "<A-.>", function()
 	require("nvterm.terminal").toggle("float")
 end, { desc = "Toggle floating terminal" })
+
+-- [[ Basic Autocommands ]]
+--  See `:help lua-guide-autocommands`
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
