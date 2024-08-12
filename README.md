@@ -136,7 +136,7 @@ debugging keymaps are set in `debug.lua` and are as follows:
 - `<F3>`: Step Out
 - `<F11>`: Terminate debugging session, close ui
 
-Golang has some additional debugging keymaps thanks to `nvim-dap-go`:
+Golang has some additional debugging keymaps thanks to [nvim-dap-go](https://github.com/leoluz/nvim-dap-go/tree/main):
 
 - `<leader>dgt`: Debug go test under cursor
 - `<leader>dlt`: Debug last test (rerun last debug session)
