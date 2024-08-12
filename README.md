@@ -9,7 +9,8 @@ called [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvi
 
 ### Install Neovim
 
-Install the latest stable version of [neovim](https://github.com/neovim/neovim). I prefer to [build from source](https://github.com/neovim/neovim/blob/master/BUILD.md).
+Install the latest stable version of [neovim](https://github.com/neovim/neovim).
+I prefer to [build from source](https://github.com/neovim/neovim/blob/master/BUILD.md).
 
 ### Install External Dependencies
 
@@ -28,7 +29,8 @@ External Requirements:
 
 ### Setup your neovim config
 
-Neovim's configurations are located under the following paths, depending on your OS:
+Neovim's configurations are located under the following paths,
+depending on your OS:
 
 | OS | PATH |
 | :- | :--- |
@@ -54,7 +56,8 @@ This command will clone the repo to your `~/.config/nvim` folder:
 git clone git@github.com:lylekuykendall/nvim.config.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
-Alternatively, you may wish to clone the repo elsewhere and create a symlink to `~/.config/nvim` as follows:
+Alternatively, you may wish to clone the repo elsewhere and create a symlink to
+`~/.config/nvim` as follows:
 
 ```sh
 git clone git@github.com:lylekuykendall/nvim.config.git && sudo ln -s /path/to/cloned/repo ~/.config/nvim
@@ -68,15 +71,17 @@ Start Neovim
 nvim
 ```
 
-Lazy will install all the default plugins the first time you open neovim. It will also automatically
-install any new plugins you create files for in the `plugins` folder. `lazy-bootstrap.lua` is
-the file that bootstraps the initial install of the config, and `lazy-plugins.lua` is
-responsible for installing the plugins defined in the `plugins` folder.
+Lazy will install all the default plugins the first time you open neovim.
+It will also automatically install any new plugins you create files for in
+the `plugins` folder. `lazy-bootstrap.lua` is the file that bootstraps the
+initial install of the config, and `lazy-plugins.lua` is responsible for
+installing the plugins defined in the `plugins` folder.
 
 ### Learning keymaps
 
-By default, `<space>` is the leader key. When you see `<leader>` in keymappings, it refers to the leader key.
-Leader key can be changed by updating these two lines in `init.lua`
+By default, `<space>` is the leader key. When you see `<leader>` in keymappings,
+it refers to the leader key. Leader key can be changed by updating these two lines
+in `init.lua`
 
 ```lua
 vim.g.mapleader = ' '
@@ -89,40 +94,72 @@ These two files have most of the keymaps and options being used:
 - `keymaps.lua` for global neovim keymaps
 - `telescope.lua` for telescope-specific (fuzzy file search & more) keymaps
 
-#### Telescope keymaps
+Note: The keymaps above also work in normal mode without `<leader>`.
+IE, while in normal mode, `sf` will open the fuzzy file search, etc.
+
+### Changing the color scheme
+
+There are a variety of bundled themes. Try `<leader>tc` or
+`:Telescope colorscheme` to open a picker and preview window.
+
+### Important Plugins
+
+Use `:Lazy` to view status for all installed plugins. Hit `q` to close the window.
+
+#### LSP Config
+
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) is used for
+configuring LSP (language server protocol) in neovim. There are several
+language servers installed by default using Mason (see `:h Mason`). You can add
+additional servers to the `ensure_installed` table on line 221 of
+`lspconfig.lua` and Mason will install them automatically the next
+time you start Neovim.
+
+#### Mason
+
+Mason is a package manager for neovim plugins. This repo uses Mason,
+mason-lspconfig, and mason-tool-installer to handle automatically installing
+and setting up language servers. The configuration for each of these plugins
+can be viewed in `lspconfig.lua`. See [available servers](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers)
+for additional server options, or type `:Mason` to open a browsable UI.
+
+#### Telescope
+
+Telescope is a fuzzy finder for neovim. It has options for fuzzy finding a
+variety of items, the list below is only a small selection. Telescope is
+configured in `telescope.lua`.
+
+##### Telescope keymaps
 
 - `<leader>sf` for fuzzy file search
 - `<leader>sn` for fuzzy file search within neovim config files
 - `<leader>sg` for fuzzy grep for text
 - `<leader>sw` for fuzzy grep for word under cursor
 - `<leader>sk` for fuzzy keymap search
+- `<leader>ss` for fuzzy searching Telescope's commands
+  - You can assign keymaps for any of the options in this menu
 
-Note: The keymaps above also work in normal mode without `<leader>`. IE, while in normal mode,
-`sf` will open the fuzzy file search, etc.
+#### nvim-cmp (Autocomplete)
 
-### Changing the color scheme
+[nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is a completion engine for neovim.
+It provides auto-complete suggestions based on the cmp sources that have been
+installed and configured. These plugins are installed and configured in `cmp.lua`.
+If you want AI completion suggestions, you will need to configure `codeium.nvim`.
+See section below for more detail.
 
-There are a variety of bundled themes. Try `<leader>tc` or `:Telescope colorscheme` to 
-open a picker and preview window.
+#### Treesitter
 
-### Plugins worth learning about
+[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) enables
+syntax highlighting for a variety of languages, as well as other language parsing
+capabilites. Default languages are listed in `ensure_installed` on line 6 of
+`treesitte.lua`. You can add additional languages here to be installed automatically,
+or run `TSInstall <language>` manually.
 
-There are a few plugins worth learning a little more about:
+#### Dadbod (SQL UI)
 
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - configured in `lspconfig.lua`
-  - There are several language servers installed by default using Mason (see `:h Mason`)
-  - These default language servers are listed in the `ensure_installed` table on line 221 of `lspconfig.lua`.
-    - Add additional servers as you see fit, see [available servers](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers).
-- [telescope](https://github.com/nvim-telescope/telescope.nvim) - configured in `telescope.lua`
-- [nvim-cmp (completion)](https://github.com/hrsh7th/nvim-cmp) - configured in `cmp.lua`
-- [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - configured in `treesitter.lua`
-  - Treesitter has support for several languages installed by default, listed in `ensure_installed` on line 6 of `treesitter.lua`
-  - Add additional languages to this table, or install manually with `:TSInstall <language>`
-- [vim-dadbod](https://github.com/tpope/vim-dadbod)
-  - Provides a UI for running SQL queries against relational databases directly in neovim
-  - Might even be able to put together a Snowflake adapter based on [this PR](https://github.com/tpope/vim-dadbod/pull/65)
-
-Use `:Lazy` to view current plugin status. Hit `q` to close the window.
+[vim-dadbod](https://github.com/tpope/vim-dadbod) provides a UI for running SQL
+queries against relational databases directly in neovim. Might be able to put
+together a Snowflake adapter based on [this PR](https://github.com/tpope/vim-dadbod/pull/65).
 
 ### Debugging
 
@@ -148,26 +185,29 @@ Golang has some additional debugging keymaps thanks to [nvim-dap-go](https://git
 see these options after pressing `<F5>` to begin a debug session. For more information,
 see the [docs](https://github.com/leoluz/nvim-dap-go/blob/main/README.md#debugging-with-command-line-arguments).
 
-When the debug ui is visible, you can jump between the various windows with `<C-hjkl>` (`CTRL+hjkl`).
+When the debug ui is visible, you can jump between the various windows
+with `<C-hjkl>` (`CTRL+hjkl`).
 
 ### Plugins requiring additional configuration
 
 #### TagBar
 
-Tagbar is a sidebar you can toggle open/closed with `<F8>`. It requires that you 
-have [ctags](https://github.com/universal-ctags/ctags?tab=readme-ov-file#how-to-build-and-install) 
+Tagbar is a sidebar you can toggle open/closed with `<F8>`. It requires that you
+have [ctags](https://github.com/universal-ctags/ctags?tab=readme-ov-file#how-to-build-and-install)
 intalled and on your path.
 
 #### Codeium
 
-[codeium.nvim](https://github.com/Exafunction/codeium.nvim) is an ai completion tool that you can use 
-as a source for your completion suggestions. You'll need to run `:Codeium auth` and use the link to get an
-api token to give to the plugin. Next, you'll need to find and uncomment the two locations in this config
-where codeium can be used as a source. Try `sg` or `<leader>sg` and grepping for `codeium` to find these lines.
+[codeium.nvim](https://github.com/Exafunction/codeium.nvim) is an ai completion
+tool that you can use as a source for your completion suggestions. You'll need
+to run `:Codeium auth` and use the link to get an api token to give to the plugin.
+Next, you'll need to find and uncomment the two locations in this config where
+codeium can be used as a source. Try `sg` or `<leader>sg` and grepping for
+`codeium` to find these lines.
 
 #### Pyright (Python LSP) Virtual Env Configuration
 
-Getting pyright to recognize the correct virtual environment to use for its interpreter can be tricky.
-If you use [pyenv](https://github.com/pyenv/pyenv) for managing your virtual environments, you can 
-configure pyright at a per-project level using a pyenv plugin called 
-[pyenv-pyright](https://github.com/alefpereira/pyenv-pyright).
+Getting pyright to recognize the correct virtual environment to use for its
+interpreter can be tricky. If you use [pyenv](https://github.com/pyenv/pyenv)
+for managing your virtual environments, you can configure pyright at a per-project
+level using a pyenv plugin called [pyenv-pyright](https://github.com/alefpereira/pyenv-pyright).
