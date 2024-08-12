@@ -8,7 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, useful for resizing splits
-vim.opt.mouse = "a"
+vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -18,11 +18,11 @@ vim.opt.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
+  vim.opt.clipboard = 'unnamedplus'
 end)
 
-vim.opt.tabstop = 2 -- number of spaces that a <Tab> in the file counts for
-vim.opt.shiftwidth = 2 -- number of spaces to use for each step of (auto)indent
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 vim.opt.smarttab = true
 vim.opt.expandtab = true
@@ -44,7 +44,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = 'yes'
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -61,10 +61,10 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = false
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = "split"
+vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
@@ -73,10 +73,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- remember last cursor position when reopening a file
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-	desc = "return cursor to where it was last time closing the file",
-	pattern = "*",
-	command = 'silent! normal! g`"zv',
+vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
+  desc = 'return cursor to where it was last time closing the file',
+  pattern = '*',
+  command = 'silent! normal! g`"zv',
 })
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,15 +1,16 @@
 return {
-	"lcroberts/persistent-colorscheme.nvim",
-	lazy = false,
-	priority = 1000,
-	dependencies = {
-		"notken12/base46-colors", -- lots of baked-in themes, view with :Telescope colorscheme
-		{
-			"folke/tokyonight.nvim",
-			opts = {
-				style = "night",
-			},
-		},
-	},
-	opts = {},
+  'lcroberts/persistent-colorscheme.nvim',
+  lazy = false,
+  priority = 1000,
+  dependencies = {
+    -- 'RRethy/nvim-base16', -- Lots of baked-in themes and support to add more
+    'notken12/base46-colors',
+    {
+      'folke/tokyonight.nvim',
+      opts = {
+        style = 'night',
+      },
+    },
+  },
+  opts = {},
 }

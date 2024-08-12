@@ -43,6 +43,8 @@ return {
         -- You can customize some of the format options for the
         -- filetype (:help conform.format)
         rust = { 'rustfmt', lsp_format = 'fallback' },
+        -- markdown = { 'mdformat', lsp_format = 'fallback' },
+        yaml = { 'yamlfmt', lsp_format = 'fallback' },
       },
     },
   },
