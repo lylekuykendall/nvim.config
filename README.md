@@ -116,6 +116,30 @@ There are a few plugins worth learning a little more about:
 
 Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
+### Debugging
+
+This configuration uses [nvim-dap](https://github.com/mfussenegger/nvim-dap) and
+[nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) to provide an out-of-the-box
+debugging experience that is automatically configured for both python and golang.
+
+You can set a breakpoint with `<leader>b`, and begin debugging with `<F5>`. The basic
+debugging keymaps are set in `debug.lua` and are as follows:
+
+- `<F5>`: Start/Continue debugging
+- `<F1>`: Step Into
+- `<F2>`: Step Over
+- `<F3>`: Step Out
+- `<F11>`: Terminate debugging session, close ui
+
+Golang has some additional debugging keymaps thanks to `nvim-dap-go`:
+
+- `<leader>dgt`: Debug go test under cursor
+- `<leader>dlt`: Debug last test (rerun last debug session)
+
+`nvim-dap-go` also has support for build flags and command line arguments. You should
+see these options after pressing `<F5>` to begin a debug session. For more information,
+see the [docs](https://github.com/leoluz/nvim-dap-go/blob/main/README.md#debugging-with-command-line-arguments).
+
 ### Plugins requiring additional configuration
 
 #### TagBar
