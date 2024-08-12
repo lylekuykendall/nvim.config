@@ -18,7 +18,7 @@ return {
 		for _, idx in ipairs({ 1, 2, 3, 4, 5 }) do
 			vim.keymap.set("n", string.format("<space>%d", idx), function()
 				harpoon:list():select(idx)
-			end)
+			end, { desc = "Harpoon " .. idx })
 		end
 	end,
 }
