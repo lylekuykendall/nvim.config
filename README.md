@@ -97,7 +97,8 @@ These two files have most of the keymaps and options being used:
 
 ### Changing the color scheme
 
-There are a variety of bundled themes. Try `:Telescope colorscheme` to open a picker and preview window.
+There are a variety of bundled themes. Try `<leader>th` or `:Telescope colorscheme` to 
+open a picker and preview window.
 
 ### Plugins worth learning about
 
