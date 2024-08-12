@@ -207,7 +207,7 @@ return {
 				"tflint", -- terraform linter
 				"jsonlint", -- json linter
 				"hadolint", -- dockerfile linter
-				"vale", -- markdown linter
+				"markdownlint", -- markdown linter
 				"revive", -- golang linter
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
