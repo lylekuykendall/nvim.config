@@ -92,6 +92,13 @@ return {
 					},
 				},
 
+				cmp.setup.filetype({ "sql" }, {
+					sources = {
+						{ name = "vim-dadbod-completions" },
+						{ name = "buffer" },
+					},
+				}),
+
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
 				--

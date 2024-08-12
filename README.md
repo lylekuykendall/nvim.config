@@ -118,6 +118,9 @@ There are a few plugins worth learning a little more about:
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - configured in `treesitter.lua`
   - Treesitter has support for several languages installed by default, listed in `ensure_installed` on line 6 of `treesitter.lua`
   - Add additional languages to this table, or install manually with `:TSInstall <language>`
+- [vim-dadbod](https://github.com/tpope/vim-dadbod)
+  - Provides a UI for running SQL queries against relational databases directly in neovim
+  - Might even be able to put together a Snowflake adapter based on (this PR)[https://github.com/tpope/vim-dadbod/pull/65]
 
 Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
