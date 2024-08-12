@@ -19,6 +19,7 @@ External Requirements:
   - If you built from source, the first step had you install these build requisites
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - Clipboard tool (xclip/xsel/win32yank or other depending on platform)
+  - Linux/Mac will most likely already have one of these installed
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides various icons
   - if you have it set `vim.g.have_nerd_font` in `init.lua` to true
 - Language Setup:
