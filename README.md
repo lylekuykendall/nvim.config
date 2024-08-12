@@ -158,7 +158,7 @@ intalled and on your path.
 [codeium.nvim](https://github.com/Exafunction/codeium.nvim) is an ai completion tool that you can use 
 as a source for your completion suggestions. You'll need to run `:Codeium auth` and use the link to get an
 api token to give to the plugin. Next, you'll need to find and uncomment the two locations in this config
-where codeium can be used as a source. Try `fg` or `<leader>sg` and grepping for `codeium` to find these lines.
+where codeium can be used as a source. Try `sg` or `<leader>sg` and grepping for `codeium` to find these lines.
 
 #### Pyright (Python LSP) Virtual Env Configuration
 
