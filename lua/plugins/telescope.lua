@@ -97,7 +97,7 @@ return {
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
 			-- Easily change colorscheme
-			vim.keymap.set("n", "<leader>th", builtin.colorscheme, { desc = "[T]elescope T[h]eme Picker" })
+			vim.keymap.set("n", "<leader>tc", builtin.colorscheme, { desc = "[T]elescope [C]olorscheme Picker" })
 
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
