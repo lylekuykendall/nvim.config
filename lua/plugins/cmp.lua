@@ -64,7 +64,7 @@ return {
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-cmdline",
-			"Exafunction/codeium.nvim",
+			-- "Exafunction/codeium.nvim",
 		},
 		config = function()
 			-- See `:help cmp`
@@ -189,7 +189,7 @@ return {
 					-- { name = 'friendly-snippets' },
 					{ name = "path" },
 					{ name = "buffer" },
-					{ name = "codeium" }, -- ai completion, see https://github.com/Exafunction/codeium.nvim
+					-- { name = "codeium" }, -- ai completion, see https://github.com/Exafunction/codeium.nvim
 				},
 			})
 		end,
