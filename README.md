@@ -95,6 +95,9 @@ These two files have most of the keymaps and options being used:
 - `<leader>sw` for fuzzy grep for word under cursor
 - `<leader>sk` for fuzzy keymap search
 
+Note: The keymaps above also work in normal mode without `<leader>`. IE, while in normal mode,
+`sf` will open the fuzzy file search, etc.
+
 ### Changing the color scheme
 
 There are a variety of bundled themes. Try `<leader>tc` or `:Telescope colorscheme` to 
