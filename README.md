@@ -120,7 +120,7 @@ There are a few plugins worth learning a little more about:
   - Add additional languages to this table, or install manually with `:TSInstall <language>`
 - [vim-dadbod](https://github.com/tpope/vim-dadbod)
   - Provides a UI for running SQL queries against relational databases directly in neovim
-  - Might even be able to put together a Snowflake adapter based on (this PR)[https://github.com/tpope/vim-dadbod/pull/65]
+  - Might even be able to put together a Snowflake adapter based on [this PR](https://github.com/tpope/vim-dadbod/pull/65)
 
 Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
