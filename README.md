@@ -88,7 +88,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 ```
 
-These two files have most of the keymaps and options being used:
+These files have most of the keymaps and options being used:
 
 - `options.lua` for global neovim options
 - `keymaps.lua` for global neovim keymaps
