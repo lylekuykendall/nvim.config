@@ -126,6 +126,7 @@ return {
 			" ",
 			"<leader>a         [a]dd file to harpoon list",
 			"<leader>l         show harpoon [l]ist",
+			"<leader>1-5       jump to harpoon [1-5]",
 		}
 
 		local debugging = {
