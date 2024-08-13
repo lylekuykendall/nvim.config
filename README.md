@@ -36,14 +36,6 @@ called [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvi
 
 ![](./load.png)
 
-<figure>
-  <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="The beautiful MDN logo.">
-  <figcaption>MDN Logo</figcaption>
-</figure>
-
-
 ## Installation
 
 ### Install Neovim
