@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents
+
+- [nvim.config](#nvimconfig)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+    - [Install Neovim](#install-neovim)
+    - [Install External Dependencies](#install-external-dependencies)
+    - [Setup your neovim config](#setup-your-neovim-config)
+      - [Recommended Step](#recommended-step)
+      - [Clone the repo](#clone-the-repo)
+  - [Post-Install](#post-install)
+  - [Learning keymaps](#learning-keymaps)
+  - [Changing the color scheme](#changing-the-color-scheme)
+  - [Important Plugins](#important-plugins)
+    - [LSP Config](#lsp-config)
+    - [Mason](#mason)
+    - [Telescope](#telescope)
+      - [Telescope keymaps](#telescope-keymaps)
+    - [nvim-cmp (Autocomplete)](#nvim-cmp-autocomplete)
+    - [Treesitter](#treesitter)
+    - [Dadbod (SQL UI)](#dadbod-sql-ui)
+  - [Debugging](#debugging)
+  - [Plugins requiring additional configuration](#plugins-requiring-additional-configuration)
+    - [TagBar](#tagbar)
+    - [Codeium](#codeium)
+    - [Pyright (Python LSP) Virtual Env Configuration](#pyright-python-lsp-virtual-env-configuration)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # nvim.config
 
 ## Introduction
