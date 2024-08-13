@@ -138,6 +138,15 @@ return {
 			"<F11>        terminate session",
 		}
 
+		local tabs = {
+			"        tabs                            ",
+			" ",
+			"<TAB>n       Open new tab",
+			"<TAB>l       Cycle next tab",
+			"<TAB>h       Cycle prev tab",
+			"<TAB>x       Close current tab",
+		}
+
 		local spacer = {
 			"                          ",
 			"                          ",
@@ -191,7 +200,7 @@ return {
 		local block2 = {
 			type = "group",
 			val = col(
-				{ debugging, spacer, harpoon },
+				{ debugging, tabs, harpoon },
 				{ position = "center", hl = { { "Title", 0, -1 }, { "Comment", 0, -1 }, { "Title", 0, -1 } } }
 			),
 			opts = {
