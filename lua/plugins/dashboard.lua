@@ -118,6 +118,7 @@ return {
 			"fh or <leader>sh        fuzzy [f]ind in [h]elp docs",
 			"ft or <leader>st        fuzzy [f]ind [T]elescope built-ins",
 			"fd or <leader>sd        fuzzy [f]ind document [d]iagnostics",
+			"<leader>/               fuzzy [f]ind in current buffer",
 		}
 
 		local harpoon = {
