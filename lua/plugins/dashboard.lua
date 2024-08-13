@@ -251,7 +251,7 @@ return {
 				block1,
 				{ type = "padding", val = 8 },
 				block2,
-				{ type = "padding", val = 5 },
+				{ type = "padding", val = 11 },
 				block3,
 				{ type = "padding", val = 5 },
 				foot,
