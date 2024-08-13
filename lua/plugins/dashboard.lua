@@ -106,7 +106,7 @@ return {
 		}
 
 		local search = {
-			"                 search                            ",
+			"                  find                            ",
 			" ",
 			"ff or <leader>sf        fuzzy [f]ind [f]iles in cwd",
 			"fg or <leader>sg        fuzzy [f]ind within files in cwd with [g]rep",
