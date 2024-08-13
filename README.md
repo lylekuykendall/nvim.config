@@ -1,8 +1,5 @@
 # nvim.config
 
-![Dashboard](./load.png)
-
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 - [Introduction](#introduction)
@@ -36,6 +33,9 @@
 
 This is my neovim configuration. It is based on a fork of [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 called [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim).
+
+![](./load.png)
+*Landing page*
 
 ## Installation
 
