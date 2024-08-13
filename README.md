@@ -35,7 +35,14 @@ This is my neovim configuration. It is based on a fork of [nvim-lua/kickstart.nv
 called [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim).
 
 ![](./load.png)
-<p style="text-align: center;">*Landing page*</p>
+
+<figure>
+  <img
+  src="https://developer.mozilla.org/static/img/favicon144.png"
+  alt="The beautiful MDN logo.">
+  <figcaption>MDN Logo</figcaption>
+</figure>
+
 
 ## Installation
 
