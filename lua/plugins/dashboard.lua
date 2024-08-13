@@ -138,6 +138,14 @@ return {
 			"<F11>        terminate session",
 		}
 
+		local splits = {
+			"          splits                            ",
+			" ",
+			"<leader>v       split right (vertical)",
+			"<leader>h       split down (horizontal)",
+			":q or :wq       close active split",
+		}
+
 		local tabs = {
 			"        tabs                            ",
 			" ",
@@ -145,6 +153,21 @@ return {
 			"<TAB>l       Cycle next tab",
 			"<TAB>h       Cycle prev tab",
 			"<TAB>x       Close current tab",
+		}
+
+		local terminal = {
+			"               terminal                            ",
+			" ",
+			"<ALT>h         toggle terminal [h]orizontally",
+			"<ALT>v         toggle terminal [v]ertically",
+			"<ALT>.         toggle floating terminal",
+			" ",
+			" ",
+			" ",
+			" ",
+			"               file tree                            ",
+			" ",
+			"<C-n> or \\         toggle file tree sidebar",
 		}
 
 		local spacer = {
@@ -189,7 +212,7 @@ return {
 		local block1 = {
 			type = "group",
 			val = col(
-				{ search, spacer, git },
+				{ git, search, terminal },
 				{ position = "center", hl = { { "Title", 0, -1 }, { "Comment", 0, -1 }, { "Title", 0, -1 } } }
 			),
 			opts = {
@@ -200,7 +223,7 @@ return {
 		local block2 = {
 			type = "group",
 			val = col(
-				{ debugging, tabs, harpoon },
+				{ debugging, tabs, splits, harpoon },
 				{ position = "center", hl = { { "Title", 0, -1 }, { "Comment", 0, -1 }, { "Title", 0, -1 } } }
 			),
 			opts = {
