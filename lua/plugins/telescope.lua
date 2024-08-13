@@ -80,24 +80,29 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+      -- Keymaps with leader key
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', '<CMD> Telescope find_files follow=true <CR>', { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
+      vim.keymap.set('n', '<leader>st', builtin.builtin, { desc = '[S]earch Select [T]elescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-      vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
-      vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+      vim.keymap.set('n', '<leader>sR', builtin.resume, { desc = '[S]earch [R]esume' })
+      vim.keymap.set('n', '<leader>sr', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
-      vim.keymap.set('n', 'sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-      vim.keymap.set('n', 'sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', 'sf', '<CMD> Telescope find_files follow=true <CR>', { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', 'sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-      vim.keymap.set('n', 'sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', 'sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-      vim.keymap.set('n', 's.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+      -- Same keymaps, without leader
+      vim.keymap.set('n', 'fh', builtin.help_tags, { desc = '[F]ind in [H]elp' })
+      vim.keymap.set('n', 'fk', builtin.keymaps, { desc = '[F]ind [K]eymaps' })
+      vim.keymap.set('n', 'ff', '<CMD> Telescope find_files follow=true <CR>', { desc = '[F]ind [F]iles' })
+      vim.keymap.set('n', 'ft', builtin.builtin, { desc = '[F]ind [T]elescope Built-Ins' })
+      vim.keymap.set('n', 'fw', builtin.grep_string, { desc = '[F]ind current [W]ord' })
+      vim.keymap.set('n', 'fg', builtin.live_grep, { desc = '[F]ind with [G]rep' })
+      vim.keymap.set('n', 'fd', builtin.diagnostics, { desc = '[F]ind in [D]iagnostics' })
+      vim.keymap.set('n', 'fR', builtin.resume, { desc = '[F]ind [R]esume' })
+      vim.keymap.set('n', 'fr', builtin.oldfiles, { desc = '[F]ind [R]ecent Files' })
+      vim.keymap.set('n', 'fb', builtin.buffers, { desc = '[F]ind existing [b]uffers' })
 
       vim.keymap.set('n', '<leader>tc', builtin.colorscheme, { desc = '[T]elescope [C]olorscheme Picker' })
 
@@ -123,6 +128,9 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+      vim.keymap.set('n', 'fn', function()
+        builtin.find_files { cwd = vim.fn.stdpath 'config' }
+      end, { desc = '[F]ind in [N]eovim Config' })
     end,
   },
 }

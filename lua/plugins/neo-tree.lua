@@ -13,7 +13,6 @@ return {
   keys = {
     { '\\', '<CMD>Neotree reveal_force_cwd position=left toggle<CR>', desc = 'NeoTree cwd' },
     { '<C-n>', '<CMD>Neotree reveal_force_cwd position=left toggle<CR>', desc = 'NeoTree cwd' },
-    { '<leader>e', '<CMD>Neotree reveal_force_cwd position=left toggle<CR>', desc = 'NeoTree cwd' },
   },
   opts = {
     filesystem = {

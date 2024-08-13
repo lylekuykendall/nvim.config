@@ -38,7 +38,7 @@ return {
         -- Conform will run multiple formatters sequentially
         python = {
           'isort',
-          'black',
+          'blue',
         },
         -- You can customize some of the format options for the
         -- filetype (:help conform.format)
