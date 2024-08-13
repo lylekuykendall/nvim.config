@@ -168,7 +168,7 @@ return {
 			" ",
 			"               file tree                            ",
 			" ",
-			"<C-n> or \\         toggle file tree sidebar",
+			"<CTRL>n or \\         toggle file tree sidebar",
 		}
 
 		local spacer = {
