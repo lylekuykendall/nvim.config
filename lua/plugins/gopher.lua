@@ -58,9 +58,6 @@ return {
 		vim.keymap.set("n", "<leader>gii", "<CMD> GoImpl ", { desc = "Implement interface" })
 		vim.keymap.set("n", "<leader>gge", "<CMD> GoGet ", { desc = "Go get" })
 	end,
-	build = function()
-		vim.cmd.GoInstallDeps()
-	end,
 	---@type gopher.Config
 	opts = {},
 }
