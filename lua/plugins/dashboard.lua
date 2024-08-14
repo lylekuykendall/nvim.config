@@ -166,24 +166,9 @@ return {
 			" ",
 			" ",
 			" ",
-			"               file tree                            ",
+			"               file system                     ",
 			" ",
-			"<CTRL>n or \\         toggle file tree sidebar",
-		}
-
-		local spacer = {
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
-			"                          ",
+			"<CTRL>n        open mini-files window",
 		}
 
 		local leader = {
