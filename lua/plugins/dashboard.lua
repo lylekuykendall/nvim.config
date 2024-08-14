@@ -145,6 +145,7 @@ return {
 			"<leader>v       split right (vertical)",
 			"<leader>h       split down (horizontal)",
 			":q or :wq       close active split",
+			"<CTRL>hjkl      navigate between splits",
 		}
 
 		local tabs = {
