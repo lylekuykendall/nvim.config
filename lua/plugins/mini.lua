@@ -35,7 +35,13 @@ return {
 				},
 			})
 			local files = require("mini.files")
-			vim.keymap.set("n", "<C-n>", files.open, { desc = "Open file system" })
+			local open_to_current_file = function()
+				if not files.close() then
+					files.open(vim.api.nvim_buf_get_name(0))
+					files.reveal_cwd()
+				end
+			end
+			vim.keymap.set("n", "<C-n>", open_to_current_file, { desc = "Open file system" })
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
