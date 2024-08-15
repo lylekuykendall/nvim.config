@@ -79,17 +79,6 @@ return {
 			return values
 		end
 
-		local foot = {
-			type = "text",
-			val = {
-				[[ l.kuykendall@fetchrewards.com ]],
-			},
-			opts = {
-				position = "center",
-				hl = "Number",
-			},
-		}
-
 		local git = {
 			"             git                    ",
 			" ",
@@ -114,11 +103,27 @@ return {
 			"fr or <leader>sr        fuzzy [f]ind [r]ecently opened files",
 			"fR or <leader>sR        fuzzy [f]ind [R]esume last telescope search",
 			"fk or <leader>sk        fuzzy [f]ind [k]eymappings",
-			"fn or <leader>sn        fuzzy [f]ind in [n]eovim config files",
+			"fn or <leader>sn        fuzzy [f]ind [n]eovim config files",
 			"fh or <leader>sh        fuzzy [f]ind in [h]elp docs",
-			"ft or <leader>st        fuzzy [f]ind [T]elescope built-ins",
+			"fb or <leader>sb        fuzzy [f]ind telescope [b]uilt-ins",
 			"fd or <leader>sd        fuzzy [f]ind document [d]iagnostics",
-			"<leader>/               fuzzy [f]ind in current buffer",
+			"fc or <leader>sc        fuzzy [f]ind git [c]ommits with diff preview",
+			"fs or <leader>ss        fuzzy [f]ind git [s]tatus with diff preview",
+		}
+
+		local terminal = {
+			"               terminal                        ",
+			" ",
+			"<ALT>h         toggle terminal [h]orizontally",
+			"<ALT>v         toggle terminal [v]ertically",
+			"<ALT>.         toggle floating terminal",
+			" ",
+			" ",
+			" ",
+			" ",
+			"               file system                     ",
+			" ",
+			"<CTRL>n        open mini-files window",
 		}
 
 		local harpoon = {
@@ -157,21 +162,6 @@ return {
 			"<TAB>x       Close current tab",
 		}
 
-		local terminal = {
-			"               terminal                            ",
-			" ",
-			"<ALT>h         toggle terminal [h]orizontally",
-			"<ALT>v         toggle terminal [v]ertically",
-			"<ALT>.         toggle floating terminal",
-			" ",
-			" ",
-			" ",
-			" ",
-			"               file system                     ",
-			" ",
-			"<CTRL>n        open mini-files window",
-		}
-
 		local leader = {
 			"<leader> key is mapped to <space>",
 		}
@@ -196,12 +186,27 @@ return {
 			},
 		}
 
+		local foot = {
+			type = "text",
+			val = {
+				[[ l.kuykendall@fetchrewards.com ]],
+			},
+			opts = {
+				position = "center",
+				hl = "Number",
+			},
+		}
+
 		local block1 = {
 			type = "group",
-			val = col(
-				{ git, search, terminal },
-				{ position = "center", hl = { { "Title", 0, -1 }, { "Comment", 0, -1 }, { "Title", 0, -1 } } }
-			),
+			val = col({ git, search, terminal }, {
+				position = "center",
+				hl = {
+					{ "Title", 0, -1 },
+					{ "Comment", 0, -1 },
+					{ "Title", 0, -1 },
+				},
+			}),
 			opts = {
 				spacing = 0,
 			},
@@ -209,10 +214,14 @@ return {
 
 		local block2 = {
 			type = "group",
-			val = col(
-				{ debugging, tabs, splits, harpoon },
-				{ position = "center", hl = { { "Title", 0, -1 }, { "Comment", 0, -1 }, { "Title", 0, -1 } } }
-			),
+			val = col({ debugging, tabs, splits, harpoon }, {
+				position = "center",
+				hl = {
+					{ "Title", 0, -1 },
+					{ "Comment", 0, -1 },
+					{ "Title", 0, -1 },
+				},
+			}),
 			opts = {
 				spacing = 0,
 			},
@@ -222,7 +231,12 @@ return {
 			type = "group",
 			val = col({ leader, buffers }, {
 				position = "center",
-				hl = { { "Comment", 0, -1 }, { "Title", 0, -1 }, { "Title", 152, 159 }, { "Title", 198, 209 } },
+				hl = {
+					{ "Comment", 0, -1 },
+					{ "Title", 0, -1 },
+					{ "Title", 152, 159 },
+					{ "Title", 198, 209 },
+				},
 			}),
 			opts = {
 				spacing = 0,
