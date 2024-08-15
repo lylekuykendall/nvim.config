@@ -123,7 +123,7 @@ return {
 			" ",
 			"               file system                     ",
 			" ",
-			"<CTRL>n        open mini-files window",
+			"<CTRL>n        open mini-files window to cwd",
 		}
 
 		local harpoon = {
