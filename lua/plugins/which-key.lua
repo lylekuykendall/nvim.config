@@ -28,7 +28,7 @@ return {
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = '[G]it', mode = { 'n', 'v' } },
+        { '<leader>a', group = 'Gitsigns', mode = { 'n', 'v' } },
         { 'f', group = '[F]ind' },
       }
     end,

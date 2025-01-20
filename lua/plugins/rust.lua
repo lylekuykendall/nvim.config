@@ -1,6 +1,7 @@
 return {
   {
     'simrat39/rust-tools.nvim',
+    ft = 'rust',
     config = function()
       require('rust-tools').setup {
         -- advanced configuration: https://github.com/simrat39/rust-tools.nvim?tab=readme-ov-file#configuration
