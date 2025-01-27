@@ -171,11 +171,11 @@ configured in `telescope.lua`.
 - `<leader>ss` for fuzzy searching Telescope's commands
   - You can assign keymaps for any of the options in this menu
 
-### nvim-cmp (Autocomplete)
+### blink.cmp (Autocomplete)
 
-[nvim-cmp](https://github.com/hrsh7th/nvim-cmp) is a completion engine for neovim.
+[blink.cmp](https://github.com/Saghen/blink.cmp) is a completion engine for neovim.
 It provides auto-complete suggestions based on the cmp sources that have been
-installed and configured. These plugins are installed and configured in `cmp.lua`.
+installed and configured. These plugins are installed and configured in `completion.lua`.
 If you want AI completion suggestions, you will need to configure `codeium.nvim`.
 See section below for more detail.
 
@@ -221,12 +221,6 @@ When the debug ui is visible, you can jump between the various windows
 with `<C-hjkl>` (`CTRL+hjkl`).
 
 ## Plugins requiring additional configuration
-
-### TagBar
-
-Tagbar is a sidebar you can toggle open/closed with `<F8>`. It requires that you
-have [ctags](https://github.com/universal-ctags/ctags?tab=readme-ov-file#how-to-build-and-install)
-intalled and on your path.
 
 ### Codeium
 
