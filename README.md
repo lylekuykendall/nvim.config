@@ -17,24 +17,22 @@
   - [Mason](#mason)
   - [Telescope](#telescope)
     - [Telescope keymaps](#telescope-keymaps)
-  - [nvim-cmp (Autocomplete)](#nvim-cmp-autocomplete)
+  - [blink.cmp (Autocomplete)](#blinkcmp-autocomplete)
   - [Treesitter](#treesitter)
   - [Dadbod (SQL UI)](#dadbod-sql-ui)
 - [Debugging](#debugging)
 - [Plugins requiring additional configuration](#plugins-requiring-additional-configuration)
-  - [TagBar](#tagbar)
   - [Codeium](#codeium)
   - [Pyright (Python LSP) Virtual Env Configuration](#pyright-python-lsp-virtual-env-configuration)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 
 ## Introduction
 
 This is my neovim configuration. It is based on a fork of [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 called [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim).
 
-![](./load.png)
+![Dashboard](./load.png)
 
 ## Installation
 
